@@ -3,125 +3,211 @@
 import { useState } from "react";
 
 export default function Home() {
-  const [datasetLink, setDatasetLink] = useState(""); // Replace with actual link
-  const [submissionLink, setSubmissionLink] = useState("https://forms.gle/u39iKnW6eYHqDehc7"); // Replace with actual link
-//https://www.kaggle.com/datasets/omercolakoglu/turkish-market-sales-dataset-with-9000items/data
+  const [datasetLink, setDatasetLink] = useState("");
+  const [submissionLink, setSubmissionLink] = useState(
+    "https://forms.gle/u39iKnW6eYHqDehc7"
+  );
+  //https://www.kaggle.com/datasets/omercolakoglu/turkish-market-sales-dataset-with-9000items/data
   return (
-    <div className="container mx-auto px-6 py-10 bg-white">
-      <header className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-blue-600">ProBattle Business Intelligence (BI) Module</h1>
-        <p className="text-lg text-gray-700 mt-2">Solve a business problem using Power BI & Python</p>
+    <div className="bg-gray-100">
+      {/* Sticky Navbar */}
+      <nav className="bg-blue-600 fixed w-full top-0 z-50 shadow-lg">
+        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+          <h1 className="text-white text-2xl font-bold">ProBattle BI Module</h1>
+          <ul className="flex space-x-6 text-white">
+            <li>
+              <a href="#intro" className="hover:underline">
+                Introduction
+              </a>
+            </li>
+            <li>
+              <a href="#overview" className="hover:underline">
+                Module Overview
+              </a>
+            </li>
+            <li>
+              <a href="#scoring" className="hover:underline">
+                Scoring
+              </a>
+            </li>
+            <li>
+              <a href="#rules" className="hover:underline">
+                Rules
+              </a>
+            </li>
+            <li>
+              <a href="#submission" className="hover:underline">
+                Submission
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <header className="bg-blue-500 text-white text-center py-20 mt-16">
+        <h1 className="text-5xl font-bold">
+          ProBattle Business Intelligence Challenge
+        </h1>
+        <p className="text-lg mt-4">
+          Solve real-world business problems using Power BI & Python
+        </p>
       </header>
 
-      {/* Introduction */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-800">1. Introduction</h2>
-        <p className="text-gray-700 mt-2">
-          Welcome to the Business Intelligence (BI) module of the ProBattle Competition! In this session, you will solve a business problem using Power BI and optionally Python for data cleaning.
-        </p>
-      </section>
+      {/* Main Container */}
+      <div className="container mx-auto px-6 py-10 bg-white shadow-md rounded-lg">
+        {/* Introduction */}
+        <section id="intro" className="mb-10">
+          <h2 className="text-3xl font-semibold text-gray-800">
+            📌 Introduction
+          </h2>
+          <p className="text-gray-700 mt-2">
+            Welcome to the Business Intelligence (BI) module of the ProBattle
+            Competition! In this session, you will use Power BI and optionally
+            Python to analyze data and extract meaningful insights.
+          </p>
+        </section>
 
-      {/* Module Overview */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-800">2. Module Overview</h2>
-        <ul className="list-disc list-inside text-gray-700 mt-2">
-          <li><strong>Duration:</strong> 4 Hours (Analysis & Dashboard Creation) + 1 Hour (Evaluation)</li>
-          <li><strong>Team Size:</strong> 1 to 3 participants per team</li>
-          <li><strong>Tools Allowed:</strong> Power BI (Mandatory), Python (Optional)</li>
-          <li><strong>Dataset:</strong> <a href={datasetLink} className="text-blue-600 underline">Download here</a></li>
-        </ul>
-        <h3 className="text-xl font-semibold mt-4 text-gray-800">Deliverables:</h3>
-        <ul className="list-disc list-inside text-gray-700">
-          <li>✅ Power BI file (.pbix)</li>
-          <li>✅ Python scripts (.py) [if used]</li>
-          <li>✅ PDF report explaining insights</li>
-        </ul>
-      </section>
+        {/* Module Overview */}
+        <section id="overview" className="mb-10">
+          <h2 className="text-3xl font-semibold text-gray-800">
+            📊 Module Overview
+          </h2>
+          <ul className="list-disc list-inside text-gray-700 mt-2 space-y-2">
+            <li>
+              <strong>⏳ Duration:</strong> 4 Hours (Analysis & Dashboard
+              Creation) + 1 Hour (Evaluation)
+            </li>
+            <li>
+              <strong>👥 Team Size:</strong> 1 to 3 participants per team
+            </li>
+            <li>
+              <strong>🛠 Tools Allowed:</strong> Power BI (Mandatory), Python
+              (Optional)
+            </li>
+            <li>
+              <strong>📂 Dataset:</strong>{" "}
+              <a href={datasetLink} className="text-blue-600 underline">
+                Download here
+              </a>
+            </li>
+          </ul>
+          <h3 className="text-2xl font-semibold mt-4 text-gray-800">
+            📑 Deliverables
+          </h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>✅ Power BI file (.pbix)</li>
+            <li>✅ Python scripts (.py) [if used]</li>
+            <li>✅ PDF report explaining insights</li>
+          </ul>
+        </section>
 
-      {/* Scoring Breakdown */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-800">3. Scoring Breakdown</h2>
-        <table className="w-full border-collapse border border-gray-300 mt-2">
-          <thead>
-            <tr className="bg-white">
-              <th className="border p-2 text-gray-800">Category</th>
-              <th className="border p-2 text-gray-800">Weightage (%)</th>
-              <th className="border p-2 text-gray-800">Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border p-2 text-gray-800">Data Cleaning & Preparation</td>
-              <td className="border p-2 text-gray-800">20%</td>
-              <td className="border p-2 text-gray-800">Handling missing values, inconsistencies, and structuring data.</td>
-            </tr>
-            <tr>
-              <td className="border p-2 text-gray-800">Dashboard Design & Insights</td>
-              <td className="border p-2 text-gray-800">30%</td>
-              <td className="border p-2 text-gray-800">Clear, interactive Power BI visualizations with meaningful insights.</td>
-            </tr>
-            <tr>
-              <td className="border p-2 text-gray-800">Business Problem Solution</td>
-              <td className="border p-2 text-gray-800">25%</td>
-              <td className="border p-2 text-gray-800">How well the solution addresses the problem and decision-making.</td>
-            </tr>
-            <tr>
-              <td className="border p-2 text-gray-800">Report Quality</td>
-              <td className="border p-2 text-gray-800">15%</td>
-              <td className="border p-2 text-gray-800">Clarity, insights, and logical reasoning in the PDF report.</td>
-            </tr>
-            <tr>
-              <td className="border p-2 text-gray-800">Submission Completeness</td>
-              <td className="border p-2 text-gray-800">10%</td>
-              <td className="border p-2 text-gray-800">Proper submission of required files.</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+        {/* Scoring Breakdown */}
+        <section id="scoring" className="mb-10">
+          <h2 className="text-3xl font-semibold text-gray-800">
+            🏆 Scoring Breakdown
+          </h2>
+          <table className="w-full border border-gray-300 mt-4">
+            <thead>
+              <tr className="bg-gray-200">
+                <th className="border p-3 text-gray-800">Category</th>
+                <th className="border p-3 text-gray-800">Weightage (%)</th>
+                <th className="border p-3 text-gray-800">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border p-3 text-gray-800">
+                  Data Cleaning & Preparation
+                </td>
+                <td className="border p-3 text-gray-800">20%</td>
+                <td className="border p-3 text-gray-800">
+                  Handling missing values, structuring data.
+                </td>
+              </tr>
+              <tr>
+                <td className="border p-3 text-gray-800">
+                  Dashboard Design & Insights
+                </td>
+                <td className="border p-3 text-gray-800">30%</td>
+                <td className="border p-3 text-gray-800">
+                  Clear, interactive visualizations.
+                </td>
+              </tr>
+              <tr>
+                <td className="border p-3 text-gray-800">
+                  Business Problem Solution
+                </td>
+                <td className="border p-3 text-gray-800">25%</td>
+                <td className="border p-3 text-gray-800">
+                  Effectiveness in solving the problem.
+                </td>
+              </tr>
+              <tr>
+                <td className="border p-3 text-gray-800">Report Quality</td>
+                <td className="border p-3 text-gray-800">15%</td>
+                <td className="border p-3 text-gray-800">Clarity, logic, insights.</td>
+              </tr>
+              <tr>
+                <td className="border p-3 text-gray-800">
+                  Submission Completeness
+                </td>
+                <td className="border p-3 text-gray-800">10%</td>
+                <td className="border p-3 text-gray-800">All required files submitted.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
 
-      {/* Rules */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-800">4. Rules of Competition</h2>
-        <ul className="list-disc list-inside text-gray-700 mt-2">
-          <li>Bring your own laptops with Power BI installed.</li>
-          <li>Teams must work independently; no discussion with other teams.</li>
-          <li>Internet usage is allowed only for documentation and syntax reference.</li>
-          <li>Plagiarism or pre-built dashboards will result in disqualification.</li>
-          <li>Judges may ask questions during evaluation.</li>
-        </ul>
-      </section>
+        {/* Rules */}
+        <section id="rules" className="mb-10">
+          <h2 className="text-3xl font-semibold text-gray-800">
+            📜 Rules of Competition
+          </h2>
+          <ul className="list-disc list-inside text-gray-700 mt-2 space-y-2">
+            <li>💻 Bring your own laptops with Power BI installed.</li>
+            <li>🛑 No discussion with other teams.</li>
+            <li>🌐 Internet is allowed for documentation/reference only.</li>
+            <li>⚠️ Plagiarism or pre-built dashboards = Disqualification.</li>
+            <li>❓ Judges may ask questions during evaluation.</li>
+          </ul>
+        </section>
 
-      {/* Submission Requirements */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-800">5. Submission Requirements</h2>
-        <p className="text-gray-700 mt-2">Participants must submit the following files:</p>
-        <ul className="list-disc list-inside text-gray-700">
-          <li>✅ <strong>Power BI File (.pbix):</strong> The complete dashboard.</li>
-          <li>✅ <strong>Python Scripts (.py) [if used]:</strong> Any scripts for data cleaning.</li>
-          <li>✅ <strong>PDF Report:</strong> A document explaining insights and solutions.</li>
-        </ul>
-        <p className="mt-2 text-gray-800">
-          Submission Link: <a href={submissionLink} className="text-blue-600 underline">Submit here</a>
-        </p>
-      </section>
+        {/* Submission Requirements */}
+        <section id="submission" className="mb-10">
+          <h2 className="text-3xl font-semibold text-gray-800">
+            📩 Submission Requirements
+          </h2>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>
+              ✅ <strong>Power BI File (.pbix):</strong> The complete dashboard.
+            </li>
+            <li>
+              ✅ <strong>Python Scripts (.py) [if used]:</strong> Any scripts
+              for data cleaning.
+            </li>
+            <li>
+              ✅ <strong>PDF Report:</strong> A document explaining insights and
+              solutions.
+            </li>
+          </ul>
+          <p className="mt-2 text-gray-800">
+            Submission Link:{" "}
+            <a href={submissionLink} className="text-blue-600 underline">
+              Submit here
+            </a>
+          </p>
+        </section>
 
-      {/* Setup Notes */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-800">6. Setup Notes</h2>
-        <ul className="list-disc list-inside text-gray-700 mt-2">
-          <li>Ensure Power BI Desktop is installed before the competition.</li>
-          <li>If using Python, install required libraries like pandas, numpy, matplotlib.</li>
-          <li>Save and test your Power BI file before submission to avoid corruption.</li>
-        </ul>
-      </section>
-
-      {/* Final Message */}
-      <section className="text-center mt-10">
-        <h2 className="text-3xl font-bold text-blue-600">Good Luck! 🚀</h2>
-        <p className="text-lg text-gray-700 mt-2">
-          Showcase your data analysis and visualization skills, manage time well, and have fun solving the challenge!
-        </p>
-      </section>
+        {/* Final Message */}
+        <section className="text-center mt-10">
+          <h2 className="text-4xl font-bold text-blue-600">🚀 Good Luck!</h2>
+          <p className="text-lg text-gray-700 mt-2">
+            Showcase your data skills, manage time well, and enjoy the
+            challenge!
+          </p>
+        </section>
+      </div>
     </div>
   );
 }
