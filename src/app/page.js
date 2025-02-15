@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="bg-gray-100">
       {/* Sticky Navbar */}
-      <nav className="bg-blue-600 fixed w-full top-0 z-50 shadow-lg">
+      {/* <nav className="bg-blue-600 fixed w-full top-0 z-50 shadow-lg">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-white text-2xl font-bold">ProBattle BI Module</h1>
           <ul className="flex space-x-6 text-white">
@@ -42,7 +42,7 @@ export default function Home() {
             </li>
           </ul>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Hero Section */}
       <header className="bg-blue-500 text-white text-center py-20 mt-16">
