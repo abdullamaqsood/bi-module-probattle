@@ -210,6 +210,27 @@ export default function Home() {
           </p>
         </section>
 
+        {/* Report Submission Format */}
+        <section id="report-format" className="mb-10">
+          <h2 className="text-3xl font-semibold text-gray-800">📑 Report Submission Format</h2>
+          <p className="text-gray-700 mt-2">
+            Your report should be compiled in a PDF document and include the following:
+          </p>
+          <ul className="list-disc list-inside text-gray-700 mt-2 space-y-2">
+            <li>📌 Introduction: Briefly explain the dataset and objective of the analysis.</li>
+            <li>📊 Dataset Summary: Overview of key columns, structure, and observations.</li>
+            <li>🔍 Data Wrangling & EDA: Steps taken for cleaning, handling missing values, and initial insights.</li>
+            <li>📈 Power BI Dashboards & Insights: Include screenshots with short explanations of each dashboard.</li>
+            <li>💡 Business Recommendations: Actionable insights to improve sales, profitability, and decision-making.</li>
+            <li>📝 Conclusion: Summary of findings and key takeaways.</li>
+            {/* <li>📂 Appendix (if applicable): Additional charts, Python scripts, or supporting data.</li> */}
+          </ul>
+          <p className="mt-2 text-gray-800">
+            Ensure your report is clear, structured, and visually presentable, then submit it as a PDF using the provided link.
+          </p>
+        </section>
+
+
         {/* Final Message */}
         <section className="text-center mt-10">
           <h2 className="text-4xl font-bold text-blue-600">🚀 Good Luck!</h2>
