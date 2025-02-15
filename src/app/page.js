@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function Home() {
-  const [datasetLink, setDatasetLink] = useState("");
+  const [datasetLink, setDatasetLink] = useState("https://www.kaggle.com/datasets/omercolakoglu/turkish-market-sales-dataset-with-9000items/data");
   const [submissionLink, setSubmissionLink] = useState(
     "https://forms.gle/u39iKnW6eYHqDehc7"
   );
