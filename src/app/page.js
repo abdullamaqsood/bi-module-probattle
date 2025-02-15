@@ -3,11 +3,11 @@
 import { useState } from "react";
 
 export default function Home() {
-  const [datasetLink, setDatasetLink] = useState("https://www.kaggle.com/datasets/omercolakoglu/turkish-market-sales-dataset-with-9000items/data");
+  const [datasetLink, setDatasetLink] = useState("");
   const [submissionLink, setSubmissionLink] = useState(
     "https://forms.gle/u39iKnW6eYHqDehc7"
   );
-  //
+  //https://www.kaggle.com/datasets/omercolakoglu/turkish-market-sales-dataset-with-9000items/data
   return (
     <div className="bg-gray-100">
       {/* Sticky Navbar */}
