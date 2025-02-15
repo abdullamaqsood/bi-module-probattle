@@ -26,6 +26,11 @@ export default function Home() {
               </a>
             </li>
             <li>
+              <a href="#problem-statement" className="hover:underline">
+                Problem Statement
+              </a>
+            </li>
+            <li>
               <a href="#scoring" className="hover:underline">
                 Scoring
               </a>
@@ -102,6 +107,17 @@ export default function Home() {
           </ul>
         </section>
 
+        {/* Problem Statement */}
+        <section id="problem-statement" className="mb-10">
+          <h2 className="text-3xl font-semibold text-gray-800">
+            🔍 Problem Statement
+          </h2>
+          <p className="text-gray-700 mt-2">
+          You are a Business Intelligence Analyst working for a national retail company that operates across multiple cities and regions. The company sells a diverse range of products under various brands and categories and maintains detailed sales transaction records, including customer demographics, store performance, and salesperson details.
+          Senior management has tasked you with analyzing this data to identify key trends, uncover sales patterns, and provide actionable recommendations to optimize business performance. 
+          </p>
+        </section>
+
         {/* Scoring Breakdown */}
         <section id="scoring" className="mb-10">
           <h2 className="text-3xl font-semibold text-gray-800">
@@ -143,34 +159,8 @@ export default function Home() {
                   Effectiveness in solving the problem.
                 </td>
               </tr>
-              <tr>
-                <td className="border p-3 text-gray-800">Report Quality</td>
-                <td className="border p-3 text-gray-800">15%</td>
-                <td className="border p-3 text-gray-800">Clarity, logic, insights.</td>
-              </tr>
-              <tr>
-                <td className="border p-3 text-gray-800">
-                  Submission Completeness
-                </td>
-                <td className="border p-3 text-gray-800">10%</td>
-                <td className="border p-3 text-gray-800">All required files submitted.</td>
-              </tr>
             </tbody>
           </table>
-        </section>
-
-        {/* Rules */}
-        <section id="rules" className="mb-10">
-          <h2 className="text-3xl font-semibold text-gray-800">
-            📜 Rules of Competition
-          </h2>
-          <ul className="list-disc list-inside text-gray-700 mt-2 space-y-2">
-            <li>💻 Bring your own laptops with Power BI installed.</li>
-            <li>🛑 No discussion with other teams.</li>
-            <li>🌐 Internet is allowed for documentation/reference only.</li>
-            <li>⚠️ Plagiarism or pre-built dashboards = Disqualification.</li>
-            <li>❓ Judges may ask questions during evaluation.</li>
-          </ul>
         </section>
 
         {/* Submission Requirements */}
@@ -178,19 +168,6 @@ export default function Home() {
           <h2 className="text-3xl font-semibold text-gray-800">
             📩 Submission Requirements
           </h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>
-              ✅ <strong>Power BI File (.pbix):</strong> The complete dashboard.
-            </li>
-            <li>
-              ✅ <strong>Python Scripts (.py) [if used]:</strong> Any scripts
-              for data cleaning.
-            </li>
-            <li>
-              ✅ <strong>PDF Report:</strong> A document explaining insights and
-              solutions.
-            </li>
-          </ul>
           <p className="mt-2 text-gray-800">
             Submission Link:{" "}
             <a href={submissionLink} className="text-blue-600 underline">
