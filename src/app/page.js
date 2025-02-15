@@ -26,11 +26,6 @@ export default function Home() {
               </a>
             </li>
             <li>
-              <a href="#problem-statement" className="hover:underline">
-                Problem Statement
-              </a>
-            </li>
-            <li>
               <a href="#scoring" className="hover:underline">
                 Scoring
               </a>
@@ -159,8 +154,34 @@ export default function Home() {
                   Effectiveness in solving the problem.
                 </td>
               </tr>
+              <tr>
+                <td className="border p-3 text-gray-800">Report Quality</td>
+                <td className="border p-3 text-gray-800">15%</td>
+                <td className="border p-3 text-gray-800">Clarity, logic, insights.</td>
+              </tr>
+              <tr>
+                <td className="border p-3 text-gray-800">
+                  Submission Completeness
+                </td>
+                <td className="border p-3 text-gray-800">10%</td>
+                <td className="border p-3 text-gray-800">All required files submitted.</td>
+              </tr>
             </tbody>
           </table>
+        </section>
+
+        {/* Rules */}
+        <section id="rules" className="mb-10">
+          <h2 className="text-3xl font-semibold text-gray-800">
+            📜 Rules of Competition
+          </h2>
+          <ul className="list-disc list-inside text-gray-700 mt-2 space-y-2">
+            <li>💻 Bring your own laptops with Power BI installed.</li>
+            <li>🛑 No discussion with other teams.</li>
+            <li>🌐 Internet is allowed for documentation/reference only.</li>
+            <li>⚠️ Plagiarism or pre-built dashboards = Disqualification.</li>
+            <li>❓ Judges may ask questions during evaluation.</li>
+          </ul>
         </section>
 
         {/* Submission Requirements */}
@@ -168,6 +189,19 @@ export default function Home() {
           <h2 className="text-3xl font-semibold text-gray-800">
             📩 Submission Requirements
           </h2>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>
+              ✅ <strong>Power BI File (.pbix):</strong> The complete dashboard.
+            </li>
+            <li>
+              ✅ <strong>Python Scripts (.py) [if used]:</strong> Any scripts
+              for data cleaning.
+            </li>
+            <li>
+              ✅ <strong>PDF Report:</strong> A document explaining insights and
+              solutions.
+            </li>
+          </ul>
           <p className="mt-2 text-gray-800">
             Submission Link:{" "}
             <a href={submissionLink} className="text-blue-600 underline">
